@@ -809,6 +809,56 @@ body {
     }
 }
 
+/* === ALINHAMENTO DA LISTA DE FEATURES === */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.features-list strong {
+    color: #ffd700;
+    font-weight: bold;
+    min-width: 160px; /* largura fixa para alinhar os títulos */
+    display: inline-block;
+}
+
+.features-list span {
+    flex: 1;
+    color: #ffffff;
+}
+
+/* Mobile ajuste */
+@media (max-width: 480px) {
+    .features-list li {
+        flex-direction: column;
+    }
+
+    .features-list strong {
+        min-width: unset;
+        margin-bottom: 5px;
+    }
+}
+
+/* LINKS (cor personalizada) */
+a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffed4e;
+    text-decoration: underline;
+}
+
 /* Print styles */
 @media print {
     .header,
@@ -827,6 +877,7 @@ body {
         margin-bottom: 20px;
     }
 }
+
 
 
 
