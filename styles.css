@@ -894,6 +894,29 @@ a:hover {
         margin-bottom: 18px;
     }
 }
+/* ==== AJUSTES MENU MOBILE ==== */
+@media (max-width: 768px) {
+  /* Esconde o menu desktop */
+  nav {
+    display: none;
+  }
+
+  /* Mostra o botão hambúrguer */
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1001; /* acima do header */
+  }
+
+  /* Menu mobile fica oculto até ganhar .active */
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+}
 
 
 
