@@ -877,6 +877,12 @@ a:hover {
         margin-bottom: 20px;
     }
 }
+/* Espaçamento extra só no desktop */
+@media (min-width: 769px) {
+    .features-list li {
+        margin-bottom: 18px;
+    }
+}
 
 
 
