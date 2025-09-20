@@ -137,7 +137,7 @@ function prevImage(carouselId) {
 
 // WhatsApp functionality
 function openWhatsApp() {
-    const phoneNumber = '5547351307202';
+    const phoneNumber = '554735130720';
     const message = encodeURIComponent('Olá! Gostaria de saber mais sobre as escavadeiras RBK.');
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     
@@ -293,4 +293,5 @@ prevImage = function(carouselId) {
 openWhatsApp = function() {
     trackWhatsAppClick();
     originalOpenWhatsApp();
+
 };
