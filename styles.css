@@ -122,7 +122,18 @@ body {
     color: #ffd700;
     text-decoration: none;
 }
+.logo a {
+    pointer-events: auto; /* garante que o link funcione */
+    position: relative;
+    z-index: 1010;        /* acima do header (1000) */
+}
 
+.logo-img {
+    height: 50px;         /* ajuste conforme necessário */
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
 .menu-toggle {
     background: none;
     border: none;
@@ -817,3 +828,4 @@ body {
         margin-bottom: 20px;
     }
 }
+
