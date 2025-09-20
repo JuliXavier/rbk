@@ -838,20 +838,24 @@ body {
 
 /* Mobile ajuste */
 @media (max-width: 480px) {
-     .features-list li {
-        flex-direction: column; /* título em cima, texto embaixo */
-        align-items: flex-start;
-        flex-wrap: unset; /* remove wrap do desktop */
+    .features-list li {
+        display: flex !important;      /* garante flex no mobile */
+        flex-direction: column !important; /* título em cima, descrição embaixo */
+        align-items: flex-start !important;
+        width: 100%;                   /* ocupa toda a largura */
     }
 
-    .features-list strong {
-        min-width: 0; /* remove largura fixa */
-        margin-bottom: 5px; /* espaço entre título e descrição */
+   .features-list strong {
+        display: block !important;     /* força block para ficar em linha própria */
+        min-width: 0 !important;       /* remove a largura fixa do desktop */
+        margin-bottom: 5px;
     }
 
-    .features-list span {
-        flex: unset; /* permite quebra natural do texto */
-        word-wrap: break-word; /* quebra palavras longas */
+  .features-list span {
+        display: block !important;     /* força quebra de linha */
+        flex: unset !important;
+        width: 100%;
+        word-wrap: break-word !important;
     }
 }
 /* LINKS (cor personalizada) */
@@ -889,6 +893,7 @@ a:hover {
         margin-bottom: 18px;
     }
 }
+
 
 
 
