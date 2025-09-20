@@ -839,22 +839,20 @@ body {
 /* Mobile ajuste */
 @media (max-width: 480px) {
     .features-list li {
-         display: block !important;  /* cada li ocupa a largura inteira */
-        flex-direction: unset !important; 
+        display: block !important;
+        flex-direction: unset !important;
         align-items: unset !important;
         width: 100%;
-        margin-bottom: 15px;                  /* ocupa toda a largura */
+        margin-bottom: 15px;
     }
 
-   .features-list strong {
-         .features-list strong {
+    .features-list strong {
         display: block !important;
         min-width: 0 !important;
         margin-bottom: 5px;
     }
 
-  .features-list span {
-       .features-list span {
+    .features-list span {
         display: block !important;
         flex: unset !important;
         width: 100% !important;
@@ -896,6 +894,7 @@ a:hover {
         margin-bottom: 18px;
     }
 }
+
 
 
 
