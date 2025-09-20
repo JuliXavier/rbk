@@ -838,16 +838,22 @@ body {
 
 /* Mobile ajuste */
 @media (max-width: 480px) {
-    .features-list li {
-        flex-direction: column;
+     .features-list li {
+        flex-direction: column; /* título em cima, texto embaixo */
+        align-items: flex-start;
+        flex-wrap: unset; /* remove wrap do desktop */
     }
 
     .features-list strong {
-        min-width: unset;
-        margin-bottom: 5px;
+        min-width: 0; /* remove largura fixa */
+        margin-bottom: 5px; /* espaço entre título e descrição */
+    }
+
+    .features-list span {
+        flex: unset; /* permite quebra natural do texto */
+        word-wrap: break-word; /* quebra palavras longas */
     }
 }
-
 /* LINKS (cor personalizada) */
 a {
     color: #ffd700;
@@ -883,6 +889,7 @@ a:hover {
         margin-bottom: 18px;
     }
 }
+
 
 
 
