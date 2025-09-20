@@ -124,11 +124,13 @@ body {
 }
 
 .logo-img {
-    height: 50px;         
+       height: 50px;
     width: auto;
     display: inline-block;
     vertical-align: middle;
-     margin-right: 10px;
+    margin-right: 10px;
+    z-index: 1001; /* acima do header */
+    position: relative;
 }
 
 .menu-toggle {
@@ -825,5 +827,6 @@ body {
         margin-bottom: 20px;
     }
 }
+
 
 
