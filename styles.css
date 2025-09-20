@@ -839,22 +839,25 @@ body {
 /* Mobile ajuste */
 @media (max-width: 480px) {
     .features-list li {
-        display: flex !important;      /* garante flex no mobile */
-        flex-direction: column !important; /* título em cima, descrição embaixo */
-        align-items: flex-start !important;
-        width: 100%;                   /* ocupa toda a largura */
+         display: block !important;  /* cada li ocupa a largura inteira */
+        flex-direction: unset !important; 
+        align-items: unset !important;
+        width: 100%;
+        margin-bottom: 15px;                  /* ocupa toda a largura */
     }
 
    .features-list strong {
-        display: block !important;     /* força block para ficar em linha própria */
-        min-width: 0 !important;       /* remove a largura fixa do desktop */
+         .features-list strong {
+        display: block !important;
+        min-width: 0 !important;
         margin-bottom: 5px;
     }
 
   .features-list span {
-        display: block !important;     /* força quebra de linha */
+       .features-list span {
+        display: block !important;
         flex: unset !important;
-        width: 100%;
+        width: 100% !important;
         word-wrap: break-word !important;
     }
 }
@@ -893,6 +896,7 @@ a:hover {
         margin-bottom: 18px;
     }
 }
+
 
 
 
