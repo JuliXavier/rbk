@@ -835,6 +835,16 @@ body {
     flex: 1;
     color: #ffffff;
 }
+a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffed4e;
+    text-decoration: underline;
+}
+
 
 /* Mobile ajuste */
 @media (max-width: 480px) {
@@ -858,10 +868,7 @@ body {
         width: 100% !important;
         word-wrap: break-word !important;
     }
-     /* ADICIONE ESTAS LINHAS AQUI: */
-    .hero-background img {
-        object-fit: contain;
-        background-color: #0f1720;
+
 }
    .hero-title {
         font-size: 1.9rem;
@@ -871,33 +878,8 @@ body {
         font-size: 0.95rem;
     }  
 /* LINKS (cor personalizada) */
-a {
-    color: #ffd700;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #ffed4e;
-    text-decoration: underline;
-}
 
 /* Print styles */
-@media print {
-    .header,
-    .whatsapp-button,
-    .carousel-btn {
-        display: none;
-    }
-    
-    .hero {
-        height: auto;
-        page-break-inside: avoid;
-    }
-    
-    .product-card {
-        page-break-inside: avoid;
-        margin-bottom: 20px;
-    }
 }
 /* Espaçamento extra só no desktop */
 @media (min-width: 769px) {
@@ -908,8 +890,8 @@ a:hover {
 /* ==== AJUSTES MENU MOBILE ==== */
 @media (max-width: 768px) {
   .hero {
-    height: 100vh;
     min-height: 100vh;
+    height: auto;
   }
 
   .hero-background {
@@ -980,8 +962,25 @@ a:hover {
   .mobile-menu.active {
     display: block;
   }
+    @media print {
+    .header,
+    .whatsapp-button,
+    .carousel-btn {
+        display: none;
+    }
+    
+    .hero {
+        height: auto;
+        page-break-inside: avoid;
+    }
+    
+    .product-card {
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+    }
 }
     
+
 
 
 
