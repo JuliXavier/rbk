@@ -916,7 +916,19 @@ a:hover {
   .mobile-menu.active {
     display: block;
   }
+    /* 🔹 Ajuste da hero para celular */
+  .hero-background img {
+    object-fit: contain;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .hero {
+    background-color: #0f1720; /* cobre os espaços */
+  }
 }
+
 
 
 
