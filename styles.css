@@ -910,7 +910,6 @@ a:hover {
   .hero {
     height: 100vh;
     min-height: 100vh;
-    position: relative;
   }
 
   .hero-background {
@@ -926,7 +925,7 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: 50% 30%;
   }
     /* Overlay mais escuro para melhor legibilidade */
   .hero-overlay {
@@ -983,6 +982,7 @@ a:hover {
   }
 }
     
+
 
 
 
