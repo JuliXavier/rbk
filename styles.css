@@ -925,9 +925,12 @@ a:hover {
   }
 
   .hero {
-    background-color: #0f1720; /* cobre os espaços */
+    background-size: cover;       /* cobre toda a tela */
+    background-position: center;  /* centraliza a escavadeira */
+    min-height: 85vh;             /* aumenta altura no celular */
   }
 }
+
 
 
 
