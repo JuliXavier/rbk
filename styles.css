@@ -483,6 +483,15 @@ body {
     color: #ffd700;
     margin-bottom: 20px;
     text-align: center;
+    /* Controla quebra de linha adequada */
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+/* Previne quebra inadequada entre número e parênteses */
+.product-title br {
+    display: none;
 }
 
 .product-description {
@@ -701,17 +710,18 @@ a:hover {
         overflow: hidden;
     }
 
-    /* CORREÇÃO PRINCIPAL - IMAGEM RESPONSIVA */
+    /* CORREÇÃO PRINCIPAL - IMAGEM RESPONSIVA MOBILE */
     .hero-background img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center center;
+        /* Ajuste específico para mostrar toda a escavadeira no mobile */
+        object-position: center 40%;
         min-width: 100%;
         min-height: 100%;
         display: block;
-        /* Ajuste específico para mobile */
-        transform: scale(1.02);
+        /* Remove o scale que pode estar causando corte */
+        transform: none;
     }
 
     .hero-overlay {
@@ -825,6 +835,16 @@ a:hover {
         text-align: center;
         word-wrap: break-word;
         padding: 0 10px;
+        /* Força quebra específica para títulos longos */
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    /* Estilo específico para evitar quebra inadequada nos parênteses */
+    .product-title::after {
+        content: "";
+        display: inline-block;
+        width: 0;
     }
     
     /* === CORREÇÕES PARA CARDS DE PRODUTO === */
@@ -943,10 +963,12 @@ a:hover {
         font-size: 15px;
     }
     
-    /* Hero para telas muito pequenas */
+    /* Hero para telas muito pequenas - CORREÇÃO ESPECÍFICA */
     .hero-background img {
-        object-position: center 35%;
-        transform: scale(1.05);
+        object-position: center 30%;
+        transform: none;
+        /* Garante que a escavadeira fique visível */
+        object-fit: cover;
     }
     
     .hero-title { 
