@@ -702,6 +702,8 @@ a:hover {
 
     .hero-background {
         position: absolute;
+        object-position: center 40% !important;
+        transform: none !important;
         top: 0;
         left: 0;
         width: 100%;
@@ -1090,5 +1092,6 @@ a:hover {
         margin-bottom: 20px;
     }
 }
+
 
 
