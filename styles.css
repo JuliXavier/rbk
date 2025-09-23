@@ -967,7 +967,7 @@ a:hover {
     
     /* Hero para telas muito pequenas - CORREÇÃO ESPECÍFICA */
     .hero-background img {
-        object-position: center 30%;
+        object-position: center 20%;
         transform: none;
         /* Garante que a escavadeira fique visível */
         object-fit: cover;
@@ -1033,15 +1033,16 @@ a:hover {
     }
     
     .hero-background img {
-        width: 100%;
+    width: 100%;
     height: auto;        /* mantém a proporção */
     object-fit: contain; /* mostra a imagem inteira */
-    object-position: center;
+    object-position: center 25%;;
     }
     
     .hero-content {
-        height: 100vh;
-        justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
     }
     
     .hero-title {
@@ -1091,6 +1092,7 @@ a:hover {
         margin-bottom: 20px;
     }
 }
+
 
 
 
