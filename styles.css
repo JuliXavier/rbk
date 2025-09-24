@@ -210,7 +210,7 @@ body {
     }
 }
 
-/* Hero Section - CORREÇÃO PRINCIPAL PARA RESPONSIVIDADE */
+/* Hero Section - CORREÇÃO PRINCIPAL PARA RESPONSIVIDADE MOBILE */
 .hero {
     position: relative;
     height: 100vh;
@@ -477,21 +477,20 @@ body {
     padding: 30px;
 }
 
+/* CORREÇÃO PRINCIPAL - TÍTULOS DE PRODUTOS RESPONSIVOS */
 .product-title {
     font-size: 1.8rem;
     font-weight: bold;
     color: #ffd700;
     margin-bottom: 20px;
     text-align: center;
-    /* Controla quebra de linha adequada */
-    hyphens: none;
-    word-break: normal;
-    overflow-wrap: break-word;
+    line-height: 1.3;
+    word-wrap: break-word;
 }
 
-/* Previne quebra inadequada entre número e parênteses */
-.product-title br {
-    display: none;
+/* Classe para quebra de linha no mobile */
+.mobile-break {
+    display: inline;
 }
 
 .product-description {
@@ -502,7 +501,7 @@ body {
     text-align: justify;
 }
 
-/* CORREÇÃO PRINCIPAL - REMOVE BULLETS PROBLEMÁTICOS */
+/* CORREÇÃO PRINCIPAL - LISTA DE FEATURES SEM BULLETS */
 .product-features {
     list-style: none;
     padding: 0;
@@ -510,15 +509,14 @@ body {
 }
 
 .product-features li {
-    display: flex;
-    align-items: flex-start;
+    display: block;
     margin-bottom: 15px;
     font-size: 0.95rem;
     line-height: 1.6;
     padding: 0;
+    list-style: none;
 }
 
-/* Remove qualquer bullet ou ponto visual */
 .product-features li::before {
     display: none;
 }
@@ -526,11 +524,6 @@ body {
 .product-features li strong {
     color: #ffd700;
     font-weight: bold;
-}
-
-/* Remove o span com bullet se existir */
-.feature-bullet {
-    display: none !important;
 }
 
 /* Contact Section */
@@ -664,9 +657,9 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ==== RESPONSIVE - CORREÇÕES PRINCIPAIS PARA MOBILE ==== */
+/* ==== CORREÇÕES PRINCIPAIS PARA MOBILE - RESPONSIVIDADE APRIMORADA ==== */
 @media (max-width: 768px) {
-    /* === CORREÇÕES GERAIS === */
+    /* Correções gerais */
     body {
         font-size: 16px;
         line-height: 1.6;
@@ -691,19 +684,17 @@ a:hover {
     
     .header-container { 
         padding: 0 15px; 
-    } 
+    }
 
-    /* === HERO SECTION - CORREÇÃO PRINCIPAL PARA RESPONSIVIDADE === */
+    /* CORREÇÃO PRINCIPAL 1 - HERO SECTION RESPONSIVO */
     .hero {
         height: 100vh;
-        min-height: 100vh;
         position: relative;
+        overflow: hidden;
     }
 
     .hero-background {
         position: absolute;
-        object-position: center 40% !important;
-        transform: none !important;
         top: 0;
         left: 0;
         width: 100%;
@@ -712,25 +703,26 @@ a:hover {
         overflow: hidden;
     }
 
-    /* CORREÇÃO PRINCIPAL - IMAGEM RESPONSIVA MOBILE */
+    /* CORREÇÃO CRÍTICA - IMAGEM HERO RESPONSIVA NO MOBILE */
     .hero-background img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* Ajuste específico para mostrar toda a escavadeira no mobile */
-        object-position: center 40%;
+        /* Posicionamento otimizado para mostrar a escavadeira completamente */
+        object-position: center 30%;
+        display: block;
+        /* Remove transforms que podem causar cortes */
+        transform: none !important;
+        /* Garante que a imagem ocupe todo o espaço disponível */
         min-width: 100%;
         min-height: 100%;
-        display: block;
-        /* Remove o scale que pode estar causando corte */
-        transform: none;
     }
 
     .hero-overlay {
         background: linear-gradient(
             135deg, 
-            rgba(15, 23, 32, 0.8) 0%, 
-            rgba(15, 23, 32, 0.7) 100%
+            rgba(15, 23, 32, 0.75) 0%, 
+            rgba(15, 23, 32, 0.65) 100%
         );
     }  
 
@@ -746,11 +738,10 @@ a:hover {
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.15);
+        background: rgba(0, 0, 0, 0.1);
         border-radius: 10px;
     }
 
-    /* === CORREÇÕES DE TEXTO === */
     .hero-title {
         font-size: 2.2rem !important;
         line-height: 1.2 !important;
@@ -777,7 +768,27 @@ a:hover {
         white-space: nowrap;
     }
 
-    /* === CORREÇÃO PARA TEXTOS GERAIS === */
+    /* CORREÇÃO PRINCIPAL 2 - TÍTULOS DE PRODUTOS COM QUEBRA DE LINHA NO MOBILE */
+    .product-title {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 20px !important;
+        text-align: center;
+        word-wrap: break-word;
+        padding: 0 10px;
+        display: block;
+    }
+    
+    /* Quebra específica para mobile - força quebra após o nome do produto */
+    .mobile-break {
+        display: block !important;
+        margin-top: 8px;
+        font-size: 0.9em;
+        font-weight: normal;
+        opacity: 0.9;
+    }
+
+    /* Textos gerais */
     p, .about-text, .product-description {
         font-size: 1rem !important;
         line-height: 1.7 !important;
@@ -790,7 +801,7 @@ a:hover {
         overflow-wrap: break-word;
     }
 
-    /* === CORREÇÃO PRINCIPAL - REMOVE BULLETS COMPLETAMENTE === */
+    /* Lista de features sem bullets - mantida */
     .product-features {
         list-style: none !important;
         padding: 0 15px !important;
@@ -807,7 +818,6 @@ a:hover {
         list-style: none !important;
     }
 
-    /* Remove todos os tipos de bullets */
     .product-features li::before,
     .product-features li::after {
         display: none !important;
@@ -818,7 +828,6 @@ a:hover {
         border-bottom: none;
     }
     
-    /* === CORREÇÕES PARA TEXTO EM NEGRITO === */
     .product-features li strong {
         display: block !important;
         font-size: 1.1rem !important;
@@ -829,27 +838,7 @@ a:hover {
         overflow-wrap: break-word;
     }
     
-    /* === CORREÇÕES PARA TÍTULOS DE PRODUTOS === */
-    .product-title {
-        font-size: 1.5rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 20px !important;
-        text-align: center;
-        word-wrap: break-word;
-        padding: 0 10px;
-        /* Força quebra específica para títulos longos */
-        white-space: normal;
-        word-break: break-word;
-    }
-    
-    /* Estilo específico para evitar quebra inadequada nos parênteses */
-    .product-title::after {
-        content: "";
-        display: inline-block;
-        width: 0;
-    }
-    
-    /* === CORREÇÕES PARA CARDS DE PRODUTO === */
+    /* Cards de produto */
     .product-card {
         margin: 20px 10px !important;
         padding: 0 !important;
@@ -944,7 +933,7 @@ a:hover {
         height: 55px; 
     }
 
-    /* === PREVENÇÃO DE OVERFLOW === */
+    /* Prevenção de overflow */
     * {
         max-width: 100% !important;
         word-wrap: break-word !important;
@@ -959,17 +948,17 @@ a:hover {
     }
 }
 
-/* === TELAS MUITO PEQUENAS === */
+/* Telas muito pequenas */
 @media (max-width: 480px) {
     body {
         font-size: 15px;
     }
     
-    /* Hero para telas muito pequenas - CORREÇÃO ESPECÍFICA */
+    /* Hero para telas muito pequenas */
     .hero-background img {
-        object-position: center 20%;
-        transform: none;
-        /* Garante que a escavadeira fique visível */
+        /* Ajuste mais específico para telas muito pequenas */
+        object-position: center 25% !important;
+        transform: none !important;
         object-fit: cover;
     }
     
@@ -1026,23 +1015,23 @@ a:hover {
     }
 }
 
-/* === MODO LANDSCAPE EM MOBILE === */
+/* Modo landscape em mobile */
 @media (max-width: 768px) and (orientation: landscape) {
     .hero {
         height: 100vh;
     }
     
     .hero-background img {
-    width: 100%;
-    height: auto;        /* mantém a proporção */
-    object-fit: contain; /* mostra a imagem inteira */
-    object-position: center 25%;;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 35%;
     }
     
     .hero-content {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    backdrop-filter: blur(2px);
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        backdrop-filter: blur(2px);
     }
     
     .hero-title {
@@ -1061,7 +1050,7 @@ a:hover {
     }
 }
 
-/* === FALLBACK PARA NAVEGADORES ANTIGOS === */
+/* Fallback para navegadores antigos */
 @supports not (object-fit: cover) {
     .hero-background img {
         width: auto;
