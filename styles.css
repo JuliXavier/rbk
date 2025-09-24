@@ -688,12 +688,12 @@ a:hover {
 
     /* CORREÇÃO PRINCIPAL 1 - HERO SECTION RESPONSIVO */
     .hero {
-        height: 70vh;        /* ocupa 70% da tela, não corta tanto a imagem */
-        max-height: 500px;   /* limite extra pra não ficar gigante */
+        height: 85vh;        /* ocupa 70% da tela, não corta tanto a imagem */
+        max-height: 650px;   /* limite extra pra não ficar gigante */
         margin: 0;
     }
     .hero img {
-        object-fit: contain; /* mostra a imagem inteira sem cortar */
+        object-fit: cover; /* mostra a imagem inteira sem cortar */
     }
     .hero-background {
         position: absolute;
@@ -1083,6 +1083,7 @@ a:hover {
         margin-bottom: 20px;
     }
 }
+
 
 
 
