@@ -688,9 +688,11 @@ a:hover {
 
     /* CORREÇÃO PRINCIPAL 1 - HERO SECTION RESPONSIVO */
     .hero {
-        height: 100vh;
+        height: auto;
+        aspect-ratio: 4/3;
         position: relative;
         overflow: hidden;
+        margin: 80px 0 20px 0;
     }
 
     .hero-background {
@@ -737,7 +739,7 @@ a:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 100%;
         background: rgba(0, 0, 0, 0.1);
         border-radius: 10px;
     }
@@ -1081,6 +1083,7 @@ a:hover {
         margin-bottom: 20px;
     }
 }
+
 
 
 
