@@ -1081,6 +1081,132 @@ a:hover {
         margin-bottom: 20px;
     }
 }
+/* === MENU HAMBÚRGUER === */
+.menu-toggle {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  width: 35px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 999;
+}
+
+.menu-toggle span,
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.menu-toggle::before,
+.menu-toggle::after {
+  width: 100%;
+}
+
+.menu-toggle span {
+  width: 100%;
+}
+
+.menu-toggle.active span {
+  opacity: 0;
+}
+
+.menu-toggle.active::before {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active::after {
+  transform: translateY(-9px) rotate(-45deg);
+}
+/* === CONTEÚDO DA HERO (texto e botão) === */
+.hero-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #e6b800;
+}
+
+/* === AJUSTE RESPONSIVO === */
+@media (max-width: 1024px) {
+  .hero-content {
+    top: 58%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    top: 55%;
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content .btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+  }
+}
+
 
 
 
